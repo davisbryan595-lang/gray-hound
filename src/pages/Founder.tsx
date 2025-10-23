@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Award, Users, Heart, Target } from "lucide-react";
-import founderImage from "@/assets/founder-coach.jpg";
+import founderImage from "@/assets/ray-gray-founder.png";
 
 const Founder = () => {
   return (

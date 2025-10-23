@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-basketball.jpg";
 import teamTraining from "@/assets/team-training.jpg";
 
 const Home = () => {
@@ -14,14 +13,18 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(90, 44, 111, 0.85), rgba(34, 21, 52, 0.85)), url(${heroImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="https://grayhoundgroup.org/wp-content/uploads/2024/10/Website-Loop-Wide.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/80 via-primary-dark/85 to-background/90" />
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 animate-fade-up">
             Train Smart. <span className="text-gradient">Play Hard.</span>
